@@ -1,0 +1,168 @@
+<aside
+  class="d-none d-lg-block position-sticky"
+  style="width: 300px; top: 6rem"
+>
+  <div class="rounded-4 p-4" style="background: var(--gray)">
+    <div
+      class="bg-primary rounded-circle overflow-hidden mx-auto mb-4"
+      style="width: 150px; height: 150px"
+    >
+      <img
+        src="assets/images/img.png"
+        alt=""
+        class="w-100 h-100 object-fit-cover"
+      />
+    </div>
+
+    <nav class="d-flex flex-column gap-3">
+      <a href="courses-materials.html" class="profile-link">
+        <span><i class="bi bi-book"></i></span>
+        المواد العلمية
+      </a>
+
+      <a href="current-courses.html" class="profile-link">
+        <span><i class="bi bi-play-circle"></i></span>
+        الدورات التدريبية
+      </a>
+
+      <a href="next-exams.html" class="profile-link">
+        <span><i class="bi bi-pencil-square"></i></span>
+        الاختبارات
+      </a>
+
+      <a href="certificates.html" class="profile-link">
+        <span><i class="bi bi-award"></i></span>
+        الشهادات
+      </a>
+
+      <a href="profile.html" class="profile-link">
+        <span><i class="bi bi-person-fill"></i></span>
+        البيانات الشخصية
+      </a>
+
+      <button
+        class="profile-link danger"
+        data-bs-toggle="modal"
+        data-bs-target="#logoutModal"
+      >
+        <span><i class="bi bi-box-arrow-right"></i></span>
+        تسجيل الخروج
+      </button>
+    </nav>
+  </div>
+</aside>
+
+<button
+  class="main-btn fs-6 d-block d-lg-none"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvasRight"
+  aria-controls="offcanvasRight"
+>
+  <i class="bi bi-three-dots-vertical"></i>
+  القائمة
+</button>
+
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+  style="background: var(--gray) !important"
+>
+  <div class="offcanvas-header d-flex justify-content-between">
+    <h5 id="offcanvasRightLabel">الملف الشخصي</h5>
+    <button
+      type="button"
+      class="btn-close text-reset m-0"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div
+      class="bg-primary rounded-circle overflow-hidden mx-auto mb-4"
+      style="width: 150px; height: 150px"
+    >
+      <img
+        src="assets/images/img.png"
+        alt=""
+        class="w-100 h-100 object-fit-cover"
+      />
+    </div>
+
+    <nav class="d-flex flex-column gap-3">
+      <a href="courses-materials.html" class="profile-link">
+        <span><i class="bi bi-book"></i></span>
+        المواد العلمية
+      </a>
+
+      <a href="current-courses.html" class="profile-link">
+        <span><i class="bi bi-play-circle"></i></span>
+        الدورات التدريبية
+      </a>
+
+      <a href="next-exams.html" class="profile-link">
+        <span><i class="bi bi-pencil-square"></i></span>
+        الاختبارات
+      </a>
+
+      <a href="certificates.html" class="profile-link">
+        <span><i class="bi bi-award"></i></span>
+        الشهادات
+      </a>
+
+      <a href="profile.html" class="profile-link">
+        <span><i class="bi bi-person-fill"></i></span>
+        البيانات الشخصية
+      </a>
+
+      <button
+        class="profile-link danger"
+        data-bs-toggle="modal"
+        data-bs-target="#logoutModal"
+      >
+        <span><i class="bi bi-box-arrow-right"></i></span>
+        تسجيل الخروج
+      </button>
+    </nav>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="logoutModal"
+  tabindex="-1"
+  aria-labelledby="logoutModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0 justify-content-between">
+        <h5 class="modal-title" id="logoutModalLabel">تأكيد تسجيل الخروج</h5>
+        <button
+          type="button"
+          class="btn-close m-0"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <div class="modal-body text-center">
+        هل أنت متأكد أنك تريد تسجيل الخروج؟
+      </div>
+
+      <div class="modal-footer border-0 d-flex justify-content-center gap-2">
+        <button
+          type="button"
+          class="btn btn-secondary px-4"
+          data-bs-dismiss="modal"
+        >
+          إلغاء
+        </button>
+
+        <button type="button" class="btn btn-danger px-4">تسجيل الخروج</button>
+      </div>
+    </div>
+  </div>
+</div>

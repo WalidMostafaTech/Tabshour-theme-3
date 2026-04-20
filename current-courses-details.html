@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>طبشور - منصة تعليمية رقمية</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <main style="min-height: 100dvh">
+      <div class="container section-header mb-4" style="padding-top: 8rem">
+        <div
+          class="d-flex align-items-center gap-3"
+          style="font-size: 14px; font-weight: 400"
+        >
+          <span class="opacity-75">الدورات التدريبية</span>
+          >
+          <span>الدورات التدريبية الحالية</span>
+        </div>
+
+        <h2 class="section-header-title">دورة <span>تطوير الواجهات</span></h2>
+
+        <p class="section-header-desc2">
+          بدأت رحلتي في عالم البرمجة بشغف كبير، وعملت مع كبرى الشركات التقنية.
+          أؤمن بأن التعليم يجب أن يكون عملياً
+        </p>
+      </div>
+
+      <div class="container pagePadding">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div
+              class="p-3 border rounded-4 d-flex flex-column gap-4 position-sticky"
+              style="top: 6rem"
+            >
+              <div class="rounded-3 overflow-hidden" style="height: 214px">
+                <img
+                  src="assets/images/img.png"
+                  alt="LMS"
+                  class="w-100 h-100 object-fit-cover"
+                />
+              </div>
+
+              <div class="accordion" id="courseAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      style="
+                        background-color: var(--gray) !important;
+                        border-radius: 0 !important;
+                        font-size: 1rem !important;
+                      "
+                    >
+                      القسم 1: مقدمة وأساسيات الويب
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#courseAccordion"
+                  >
+                    <div class="accordion-body p-0">
+                      <p
+                        class="lecture-item d-flex align-items-center gap-2 py-3 px-4 border-bottom"
+                        data-title="كيف يعمل الويب؟ (Client vs Server)"
+                        style="font-size: 14px; color: #64748b; cursor: pointer"
+                      >
+                        <i class="bi bi-play-circle"></i>
+                        كيف يعمل الويب؟ (Client vs Server)
+                      </p>
+
+                      <p
+                        class="lecture-item d-flex align-items-center gap-2 py-3 px-4 border-bottom"
+                        data-title="كيف يعمل الويب؟ (Client vs Server)22"
+                        style="font-size: 14px; color: #64748b; cursor: pointer"
+                      >
+                        <i class="bi bi-play-circle"></i>
+                        كيف يعمل الويب؟ (Client vs Server)22
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <section class="d-flex flex-column gap-4">
+              <div
+                id="course-section"
+                class="flex-column gap-4"
+                style="display: none"
+              >
+                <h4 id="lectureTitle">عنوان المحاضرة</h4>
+
+                <div
+                  class="course-details-video-container rounded-5 overflow-hidden"
+                >
+                  <video
+                    id="courseVideo"
+                    poster="assets/images/img.png"
+                    src="assets/images/video.mp4"
+                    class="w-100 h-100 object-fit-cover"
+                  ></video>
+
+                  <div class="video-overlay" id="videoOverlay">
+                    <button class="play-btn" id="playBtn">
+                      <i class="bi bi-play-fill"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="p-3 rounded-4"
+                  style="background-color: var(--gray)"
+                >
+                  <div class="row g-2">
+                    <div
+                      class="col-sm-9 d-flex flex-column justify-content-evenly gap-2"
+                    >
+                      <div class="d-flex flex-wrap gap-3">
+                        <p>متاح داخل الدورة فقط</p>
+                        <span class="text-secondary">محاضرة قادمة</span>
+                      </div>
+
+                      <div
+                        class="d-flex flex-wrap gap-3 small"
+                        style="color: var(--p)"
+                      >
+                        <span><i class="bi bi-clock"></i> 25 ساعة</span>
+                        <span
+                          ><i class="bi bi-calendar4-week"></i> 10 / 10 /
+                          2026</span
+                        >
+                        <span
+                          ><i class="bi bi-file-earmark-medical"></i> 12
+                          ملف</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3 d-flex flex-column gap-2">
+                      <button class="main-btn fs-6">
+                        تحميل الملفات <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-4 border">
+                <h4 class="fw-bold mb-4">ماذا ستتعلم في هذه الدورة؟</h4>
+                <div class="row g-3">
+                  <p
+                    class="col-md-6 d-flex align-items-start gap-2"
+                    style="font-size: 1rem"
+                  >
+                    <i class="bi bi-check2 text-secondary fs-4"></i>بناء واجهات
+                    مستخدم متجاوبة (Responsive) تعمل على جميع الشاشات.
+                  </p>
+                  <p
+                    class="col-md-6 d-flex align-items-start gap-2"
+                    style="font-size: 1rem"
+                  >
+                    <i class="bi bi-check2 text-secondary fs-4"></i>بناء واجهات
+                    مستخدم متجاوبة (Responsive) تعمل على جميع الشاشات.
+                  </p>
+                  <p
+                    class="col-md-6 d-flex align-items-start gap-2"
+                    style="font-size: 1rem"
+                  >
+                    <i class="bi bi-check2 text-secondary fs-4"></i>بناء واجهات
+                    مستخدم متجاوبة (Responsive) تعمل على جميع الشاشات.
+                  </p>
+                  <p
+                    class="col-md-6 d-flex align-items-start gap-2"
+                    style="font-size: 1rem"
+                  >
+                    <i class="bi bi-check2 text-secondary fs-4"></i>بناء واجهات
+                    مستخدم متجاوبة (Responsive) تعمل على جميع الشاشات.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="fw-bold mb-3">وصف الدورة</h4>
+
+                <p style="font-weight: 400">
+                  هل ترغب في دخول عالم تطوير الويب وبناء مواقع احترافية؟ هذه
+                  الدورة هي خطوتك الأولى والأساسية. تم تصميم هذا المنهج ليكون
+                  دليلك الشامل لتعلم برمجة واجهات المستخدم (Frontend
+                  Development) بطريقة عملية ومبسطة. هل ترغب في دخول عالم تطوير
+                  الويب وبناء مواقع احترافية؟ هذه الدورة هي خطوتك الأولى
+                  والأساسية. تم تصميم هذا المنهج ليكون دليلك الشامل لتعلم برمجة
+                  واجهات المستخدم (Frontend Development) بطريقة عملية ومبسطة.هل
+                  ترغب في دخول عالم تطوير الويب وبناء مواقع احترافية؟ هذه الدورة
+                  هي خطوتك الأولى والأساسية. تم تصميم هذا المنهج ليكون دليلك
+                  الشامل لتعلم برمجة واجهات المستخدم (Frontend Development)
+                  بطريقة عملية ومبسطة.
+                </p>
+              </div>
+
+              <div
+                class="p-4 rounded-4 border"
+                style="background-color: var(--gray)"
+              >
+                <h4 class="fw-bold mb-4">عن المدرب</h4>
+
+                <div
+                  class="d-flex flex-column flex-md-row align-items-center align-items-md-start"
+                >
+                  <div class="ms-md-4 mb-3 mb-md-0">
+                    <div
+                      class="rounded-circle border border-4 border-white shadow-sm overflow-hidden"
+                      style="width: 130px; height: 130px"
+                    >
+                      <img
+                        src="assets/images/img.png"
+                        class="w-100 h-100 object-fit-cover"
+                        alt="المدرب"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex-grow-1 text-center text-md-end d-flex flex-column gap-3"
+                  >
+                    <h5 class="fw-bold">أحمد محمود</h5>
+                    <p style="color: #64748b">
+                      مهندس برمجيات ومطور واجهات أمامية أول
+                    </p>
+
+                    <div
+                      class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 small"
+                      style="color: #64748b"
+                    >
+                      <span
+                        ><i class="bi bi-star-fill text-warning"></i> تقييم
+                        4.9</span
+                      >
+                      <span
+                        ><i class="bi bi-chat-left-text"></i> 2,450 مراجعة</span
+                      >
+                      <span><i class="bi bi-people"></i> 15,430 طالب</span>
+                      <span><i class="bi bi-play-circle"></i> 5 دورات</span>
+                    </div>
+
+                    <p style="color: #64748b; font-size: 14px">
+                      أعمل في مجال تطوير البرمجيات منذ أكثر من 8 سنوات. عملت مع
+                      العديد من الشركات الناشئة والشركات الكبرى لبناء منتجات
+                      رقمية قابلة للتوسع. شغفي هو تبسيط المفاهيم البرمجية
+                      المعقدة ومساعدة الطلاب على بدء مسيرتهم المهنية في مجال
+                      التكنولوجيا بنجاح.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- main.js -->
+    <script src="assets/js/loadComponent.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      const video = document.getElementById("courseVideo");
+      const overlay = document.getElementById("videoOverlay");
+      const playBtn = document.getElementById("playBtn");
+
+      playBtn.addEventListener("click", () => {
+        video.play();
+        overlay.style.opacity = "0";
+        overlay.style.pointerEvents = "none";
+      });
+
+      // لو عايز لما الفيديو يخلص يرجع الزرار
+      video.addEventListener("ended", () => {
+        overlay.style.opacity = "1";
+        overlay.style.pointerEvents = "auto";
+      });
+
+      // السيكشن
+      const lectures = document.querySelectorAll(".lecture-item");
+      const section = document.getElementById("course-section");
+      const title = document.getElementById("lectureTitle");
+
+      lectures.forEach((item) => {
+        item.addEventListener("click", () => {
+          // تغيير العنوان
+          const lectureTitle = item.getAttribute("data-title");
+          title.textContent = lectureTitle;
+
+          // اظهار السيكشن (لو كان مخفي)
+          section.style.display = "flex";
+
+          // optional: scroll على السيكشن
+          section.scrollIntoView({ behavior: "smooth" });
+
+          // active style
+          lectures.forEach((el) => el.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
