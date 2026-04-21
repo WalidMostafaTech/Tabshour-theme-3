@@ -22,6 +22,9 @@ loadComponent("navbar", "components/navbar.html").then(() => {
 // load footer
 loadComponent("footer", "components/footer.html");
 
+// load login images
+loadComponent("login-images", "components/login-images.html");
+
 // load home hero
 loadComponent("home-hero", "components/home-hero.html");
 
