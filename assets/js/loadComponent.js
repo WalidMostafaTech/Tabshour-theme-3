@@ -35,7 +35,35 @@ loadComponent("features", "components/features.html");
 loadComponent("home-banner", "components/home-banner.html");
 
 // load activities-section
-loadComponent("activities-section", "components/activities-section.html");
+loadComponent("activities-section", "components/activities-section.html").then(
+  () => {
+    const swiper = new Swiper(".activities-mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+      },
+    });
+
+    // desktop buttons
+    document
+      .getElementById("activities-btn-prev")
+      .addEventListener("click", () => swiper.slidePrev());
+    document
+      .getElementById("activities-btn-next")
+      .addEventListener("click", () => swiper.slideNext());
+
+    // mobile buttons
+    document
+      .getElementById("activities-btn-prev-mobile")
+      .addEventListener("click", () => swiper.slidePrev());
+    document
+      .getElementById("activities-btn-next-mobile")
+      .addEventListener("click", () => swiper.slideNext());
+  },
+);
 
 // load courses section
 loadComponent("courses-section", "components/courses-section.html").then(() => {
