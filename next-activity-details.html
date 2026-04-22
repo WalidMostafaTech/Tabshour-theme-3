@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>طبشور - منصة تعليمية رقمية</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <main
+      style="
+        min-height: 100dvh;
+        padding-top: 5rem;
+        background-color: var(--gray);
+      "
+    >
+      <section class="py-4 py-lg-5 bg-white border-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <span
+                class="py-1 px-2 rounded-3 bg-primary text-white d-inline-block mb-3"
+                >فعاليه قادمة</span
+              >
+              <h1 class="fw-bold display-6 text-primary mb-4">
+                ورشة عمل تصميم واجهات المستخدم الاحترافية
+              </h1>
+              <p class="text-muted fs-5 mb-4">
+                انضم إلينا في رحلة تطبيقية لتعلم أحدث أساليب التصميم العصري
+                وتحويل الأفكار إلى واجهات تفاعلية جذابة.
+              </p>
+
+              <div class="d-flex flex-wrap gap-4 mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-calendar-event fs-4 text-primary"></i>
+                  <div>
+                    <small class="text-muted d-block">التاريخ</small>
+                    <strong>25 مارس 2026</strong>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-clock fs-4 text-primary"></i>
+                  <div>
+                    <small class="text-muted d-block">الوقت</small>
+                    <strong>06:00 مساءً</strong>
+                  </div>
+                </div>
+                <!-- <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-geo-alt fs-4 text-primary"></i>
+                  <div>
+                    <small class="text-muted d-block">المكان</small>
+                    <strong>بث مباشر (Zoom)</strong>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="col-lg-5 mt-4 mt-lg-0">
+              <img
+                src="assets/images/img2.png"
+                class="img-fluid rounded-4 shadow-lg"
+                style="width: 100%; height: 300px; object-fit: cover"
+                alt="Event Image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container pagePadding">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="mb-5">
+              <h4 class="fw-bold mb-3">عن الفعالية</h4>
+              <p class="text-muted lh-lg">
+                تعتبر هذه الورشة فرصة ذهبية للمصممين المبتدئين والمحترفين لتبادل
+                الخبرات. سنناقش فيها كيفية بناء نظام تصميم (Design System)
+                متكامل، وكيفية اختيار الألوان والخطوط التي تعزز تجربة المستخدم.
+                الورشة ستكون تفاعلية بنسبة 100%.
+              </p>
+            </div>
+
+            <div class="mb-5">
+              <h4 class="fw-bold mb-3">محاور الفعالية</h4>
+              <div class="accordion shadow-sm" id="eventAccordion">
+                <div class="accordion-item border-0 mb-2">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button rounded shadow-none"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                    >
+                      المحور الأول: أساسيات التفكير التصميمي
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#eventAccordion"
+                  >
+                    <div class="accordion-body text-muted">
+                      فهم سيكولوجية المستخدم وكيفية بناء هيكلية واضحة للمعلومات
+                      قبل البدء في التصميم المرئي.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 mb-2">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed rounded shadow-none"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                    >
+                      المحور الثاني: تطبيق عملي على أداة Figma
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#eventAccordion"
+                  >
+                    <div class="accordion-body text-muted">
+                      تحويل الهياكل السلكية (Wireframes) إلى تصاميم نهائية عالية
+                      الدقة باستخدام المكونات المتغيرة.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-light border-0 p-4 rounded-4">
+              <h5 class="fw-bold mb-3">
+                <i class="bi bi-info-circle me-2"></i> ملاحظات هامة
+              </h5>
+              <ul class="text-muted mb-0">
+                <li>يجب توفر اتصال جيد بالإنترنت.</li>
+                <li>سيتم إرسال رابط الحضور قبل الموعد بـ 24 ساعة.</li>
+                <li>يوجد تسجيل للورشة متاح للمشتركين لمدة شهر.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm sticky-top" style="top: 7rem">
+              <div class="card-body p-4">
+                <div class="mb-4">
+                  <span class="text-muted fw-semibold d-block mb-1"
+                    >رسوم الحضور</span
+                  >
+                  <h3 class="fw-bold text-primary">
+                    150 ج.م
+                    <small class="fs-6 fw-normal text-muted">/ للفرد</small>
+                  </h3>
+                </div>
+
+                <div class="d-grid gap-2">
+                  <a href="#" class="main-btn">الذهاب للفعالية</a>
+                </div>
+
+                <hr class="my-4" />
+
+                <div class="d-flex align-items-center gap-3">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="assets/images/img.png"
+                      class="rounded-circle object-fit-cover"
+                      width="50"
+                      height="50"
+                      alt="Instructor"
+                    />
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="mb-0 fw-bold">م. أحمد علي</h6>
+                    <small class="text-muted">خبير تجربة مستخدم (UI/UX)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- main.js -->
+    <script src="assets/js/loadComponent.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
