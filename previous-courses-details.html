@@ -90,28 +90,23 @@
                     data-bs-parent="#courseAccordion"
                   >
                     <div class="accordion-body p-0">
-                      <div
-                        class="d-flex justify-content-between align-items-center gap-3 py-3 px-4 border-bottom"
+                      <p
+                        class="lecture-item d-flex align-items-center gap-2 py-3 px-4 border-bottom"
+                        data-title="كيف يعمل الويب؟ (Client vs Server)"
+                        style="font-size: 14px; color: #64748b; cursor: pointer"
                       >
-                        <p
-                          class="d-flex align-items-center gap-2"
-                          style="font-size: 14px; color: #64748b"
-                        >
-                          <i class="bi bi-play-circle"></i> كيف يعمل الويب؟
-                          (Client vs Server)
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between align-items-center gap-3 py-3 px-4 border-bottom"
+                        <i class="bi bi-play-circle"></i>
+                        كيف يعمل الويب؟ (Client vs Server)
+                      </p>
+
+                      <p
+                        class="lecture-item d-flex align-items-center gap-2 py-3 px-4 border-bottom"
+                        data-title="كيف يعمل الويب؟ (Client vs Server)22"
+                        style="font-size: 14px; color: #64748b; cursor: pointer"
                       >
-                        <p
-                          class="d-flex align-items-center gap-2"
-                          style="font-size: 14px; color: #64748b"
-                        >
-                          <i class="bi bi-play-circle"></i> كيف يعمل الويب؟
-                          (Client vs Server)
-                        </p>
-                      </div>
+                        <i class="bi bi-play-circle"></i>
+                        كيف يعمل الويب؟ (Client vs Server)22
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -121,57 +116,64 @@
 
           <div class="col-lg-8">
             <section class="d-flex flex-column gap-4">
-              <h4>عنوان المحاضرة</h4>
-
               <div
-                class="course-details-video-container rounded-5 overflow-hidden"
+                id="course-section"
+                class="flex-column gap-4"
+                style="display: none"
               >
-                <video
-                  id="courseVideo"
-                  poster="assets/images/img.png"
-                  src="assets/images/video.mp4"
-                  class="w-100 h-100 object-fit-cover"
-                ></video>
+                <h4 id="lectureTitle">عنوان المحاضرة</h4>
 
-                <div class="video-overlay" id="videoOverlay">
-                  <button class="play-btn" id="playBtn">
-                    <i class="bi bi-play-fill"></i>
-                  </button>
-                </div>
-              </div>
+                <div
+                  class="course-details-video-container rounded-5 overflow-hidden"
+                >
+                  <video
+                    id="courseVideo"
+                    poster="assets/images/img.png"
+                    src="assets/images/video.mp4"
+                    class="w-100 h-100 object-fit-cover"
+                  ></video>
 
-              <div class="p-3 rounded-4" style="background-color: var(--gray)">
-                <div class="row g-2">
-                  <div
-                    class="col-sm-9 d-flex flex-column justify-content-evenly gap-2"
-                  >
-                    <div class="d-flex flex-wrap gap-3">
-                      <p>متاح داخل الدورة فقط</p>
-                      <span class="text-danger fw-medium">محاضرة منتهية</span>
-                    </div>
-
-                    <div
-                      class="d-flex flex-wrap gap-3 small"
-                      style="color: var(--p)"
-                    >
-                      <span><i class="bi bi-clock"></i> 25 ساعة</span>
-                      <span
-                        ><i class="bi bi-calendar4-week"></i> 10 / 10 /
-                        2026</span
-                      >
-                      <span
-                        ><i class="bi bi-file-earmark-medical"></i> 12 ملف</span
-                      >
-                    </div>
-                  </div>
-
-                  <div class="col-sm-3 d-flex flex-column gap-2">
-                    <button class="main-btn fs-6">
-                      تحميل الملفات <i class="bi bi-download"></i>
+                  <div class="video-overlay" id="videoOverlay">
+                    <button class="play-btn" id="playBtn">
+                      <i class="bi bi-play-fill"></i>
                     </button>
-                    <!-- <button class="main-btn secondary fs-6 text-primary">
-                      99$ شراء
-                    </button> -->
+                  </div>
+                </div>
+
+                <div
+                  class="p-3 rounded-4"
+                  style="background-color: var(--gray)"
+                >
+                  <div class="row g-2">
+                    <div
+                      class="col-sm-9 d-flex flex-column justify-content-evenly gap-2"
+                    >
+                      <div class="d-flex flex-wrap gap-3">
+                        <p>متاح داخل الدورة فقط</p>
+                        <span class="text-danger fw-medium">محاضرة منتهية</span>
+                      </div>
+
+                      <div
+                        class="d-flex flex-wrap gap-3 small"
+                        style="color: var(--p)"
+                      >
+                        <span><i class="bi bi-clock"></i> 25 ساعة</span>
+                        <span
+                          ><i class="bi bi-calendar4-week"></i> 10 / 10 /
+                          2026</span
+                        >
+                        <span
+                          ><i class="bi bi-file-earmark-medical"></i> 12
+                          ملف</span
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3 d-flex flex-column gap-2">
+                      <button class="main-btn fs-6">
+                        تحميل الملفات <i class="bi bi-download"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -313,6 +315,29 @@
       video.addEventListener("ended", () => {
         overlay.style.opacity = "1";
         overlay.style.pointerEvents = "auto";
+      });
+
+      // السيكشن
+      const lectures = document.querySelectorAll(".lecture-item");
+      const section = document.getElementById("course-section");
+      const title = document.getElementById("lectureTitle");
+
+      lectures.forEach((item) => {
+        item.addEventListener("click", () => {
+          // تغيير العنوان
+          const lectureTitle = item.getAttribute("data-title");
+          title.textContent = lectureTitle;
+
+          // اظهار السيكشن (لو كان مخفي)
+          section.style.display = "flex";
+
+          // optional: scroll على السيكشن
+          section.scrollIntoView({ behavior: "smooth" });
+
+          // active style
+          lectures.forEach((el) => el.classList.remove("active"));
+          item.classList.add("active");
+        });
       });
     </script>
   </body>
